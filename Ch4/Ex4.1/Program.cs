@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 5 (Chapter 4) — Date Inspector (Math + Strings)
 
 GOAL:
@@ -16,14 +16,6 @@ PROGRAM REQUIREMENTS:
    - Whether the year is a leap year
    - The day-of-year number (1–365/366)
 4) Do not use DateTime for calculations (manual logic required).
-
-METHOD REQUIREMENTS:
-- string ReadNonEmptyString(string prompt)
-- bool IsValidDateFormat(string s)  # checks positions of hyphens + digits
-- bool IsLeapYear(int year)
-- int DaysInMonth(int year, int month)
-- int ComputeDayOfYear(int year, int month, int day)
-- bool TryParseDate(string s, out int year, out int month, out int day)
 
 RULES:
 - Use Math where helpful (e.g., bounds checks).

@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 3 (Chapter 3) — Shipping Cost Calculator (If/Else)
 
 GOAL:
@@ -24,14 +24,9 @@ PROGRAM REQUIREMENTS:
 5) Total cost = weight * baseRate * multiplier
 6) Print a clear breakdown and the final cost.
 
-METHOD REQUIREMENTS:
-- double ReadDouble(string prompt)
-- int ReadInt(string prompt)
-- double GetBaseRate(double weight)
-- double GetDistanceMultiplier(int distance)
-- double ComputeShippingCost(double weight, double baseRate, double multiplier)
-
 RULES:
 - Must use if/else (no switch for the rate tables).
 - No arrays, no lists.
 */
+
+using System;

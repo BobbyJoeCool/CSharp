@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 7 (Chapter 5) — Multiplication Table Generator (For Loops)
 
 GOAL:
@@ -15,11 +15,6 @@ PROGRAM REQUIREMENTS:
    2  2  4  6  8 10
    ...
 
-METHOD REQUIREMENTS:
-- int ReadIntInRange(string prompt, int min, int max)
-- void PrintTable(int n)
-- void PrintHeaderRow(int n)
-- void PrintRow(int row, int n)
 
 RULES:
 - Must use nested for loops for the grid.

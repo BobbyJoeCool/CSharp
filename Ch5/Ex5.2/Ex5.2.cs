@@ -14,10 +14,6 @@ PROGRAM REQUIREMENTS:
    - Minimum and maximum
 4) Handle edge case: if user enters -1 immediately, print “No numbers entered.”
 
-METHOD REQUIREMENTS:
-- int ReadInt(string prompt)
-- void UpdateMinMax(int value, ref int min, ref int max, ref bool hasValue)
-- double ComputeAverage(int sum, int count)
 
 RULES:
 - Use a loop for repeated prompting.

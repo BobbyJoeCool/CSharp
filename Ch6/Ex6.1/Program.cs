@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 9 (Functions + All Prior Topics) — Mersenne Prime Finder
 
 GOAL:

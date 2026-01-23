@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 4 (Chapter 3) — Console “ATM” Menu (Switch)
 
 GOAL:
@@ -16,16 +16,7 @@ PROGRAM REQUIREMENTS:
    - Withdraw: prompt amount > 0 AND <= balance, subtract from balance
 4) Display confirmations after each action.
 
-METHOD REQUIREMENTS:
-- int ReadMenuChoice()
-- double ReadDouble(string prompt)
-- void ShowMenu()
-- double DoDeposit(double balance)
-- double DoWithdraw(double balance)
-- void ShowBalance(double balance)
-
 RULES:
 - Must use a switch statement for menu actions.
-- Must loop until Exit.
 - No arrays, no lists.
 */

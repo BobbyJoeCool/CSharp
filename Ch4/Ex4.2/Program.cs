@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 6 (Chapter 4) — Password Rules Checker (Characters + Strings)
 
 GOAL:
@@ -16,15 +16,6 @@ PROGRAM REQUIREMENTS:
 3) Display:
    - “Valid password” OR “Invalid password”
    - If invalid, print a list of which rules failed.
-
-METHOD REQUIREMENTS:
-- string ReadNonEmptyString(string prompt)
-- bool HasUppercase(string s)
-- bool HasLowercase(string s)
-- bool HasDigit(string s)
-- bool HasSpecial(string s)
-- bool HasNoSpaces(string s)
-- void PrintFailures(...)  # you decide how to structure; keep it readable
 
 RULES:
 - Use char helper methods (char.IsUpper, char.IsLower, char.IsDigit, char.IsLetterOrDigit, etc.)

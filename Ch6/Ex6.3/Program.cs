@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 11 (Functions + All Prior Topics) — “Prime Analyzer” Menu Toolkit
 
 GOAL:

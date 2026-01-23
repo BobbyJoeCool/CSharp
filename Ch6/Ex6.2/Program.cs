@@ -1,4 +1,4 @@
-/*
+﻿/*
 PROGRAM 10 (Functions + All Prior Topics) — Palindromic Prime Printer
 
 GOAL:
