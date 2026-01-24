@@ -20,3 +20,35 @@ RULES:
 - Must use nested for loops for the grid.
 - No arrays, no lists.
 */
+
+using System;
+
+Console.WriteLine("Enter an integer (1-20): ");
+int n = int.Parse(Console.ReadLine());
+
+if (n < 1 || n > 20)
+{
+   Console.WriteLine("Input must be between 1 and 20.");
+   return;
+}
+
+
+for (int col = 0; col <= n; col++)
+{
+   if (col == 0) 
+      Console.Write("{0, 5}", "X");
+   else
+      Console.Write($"{col, 5}");
+}
+Console.WriteLine();
+for (int row = 1; row <= n; row ++)
+{
+   for (int col = 0; col <=n; col ++)
+   {
+      if (col == 0)
+         Console.Write($"{row, 5}"); 
+      else
+         Console.Write($"{row * col, 5}");
+   }
+   Console.WriteLine();
+}
