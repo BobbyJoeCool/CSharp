@@ -30,3 +30,60 @@ RULES:
 */
 
 using System;
+using System.Reflection.Metadata.Ecma335;
+
+Console.WriteLine("Enter the Package Weight in Pounds: ");
+double weight = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter the Shipping Distance in Miles: ");
+double distance = double.Parse(Console.ReadLine());
+
+double shippingRate = 0.0;
+double distanceMod = 1.0;
+
+if (weight <= 0 || distance < 1)
+{
+   Console.WriteLine("Invalid input. Weight must be greater than 0 and distance must be at least 1 mile.");
+   return;
+}
+
+if (weight <= 2.0)
+{
+   shippingRate = 1.10;
+}
+else if (weight <= 5.0)
+{
+   shippingRate = 2.20;
+}
+else if (weight <= 10.0)
+{
+   shippingRate = 3.70;
+}
+else 
+{
+   shippingRate = 5.00;
+}
+
+if (distance >= 49 && distance < 200)
+{
+   distanceMod = 1.25;
+}
+else if (distance >= 200 && distance < 500)
+{
+   distanceMod = 1.50;
+}
+else if (distance > 500)
+{
+   distanceMod = 1.75;
+}
+
+double subCost = weight * shippingRate;
+double totalCost = subCost * distanceMod;
+
+Console.WriteLine("\n--- Shipping Cost Breakdown ---");
+Console.WriteLine($"Package weight: {weight} lbs");
+Console.WriteLine($"Distance: {distance} miles");
+Console.WriteLine($"Base rate: {shippingRate:C} per lb");
+Console.WriteLine($"Base cost: {subCost:C}");
+Console.WriteLine($"Distance multiplier: x{distanceMod}");
+Console.WriteLine($"Total shipping cost: {totalCost:C}");
