@@ -35,9 +35,8 @@ PROGRAM REQUIREMENTS
 
 3) Output:
    - Print the locker numbers that are open after all passes
-   - Print them on ONE line
-   - Separate numbers by exactly one space
-   - Do not print extra spaces at the beginning or end of the line
+   - Print them 5 to a line.
+   - Separate numbers by a tab.
 
 --------------------------------------------------------------------
 RULES / CONSTRAINTS
@@ -61,6 +60,38 @@ public class LockerPuzzle
 {
     public static void Main()
     {
-        // TODO: Implement the locker puzzle simulation here
+        bool[] lockers = new bool[100];
+
+        for (int student = 1; student <= lockers.Length; student++)
+        {
+            toggleLockersForStudent(student, ref lockers);
+        }
+
+        int openCount = 0;
+
+        Console.WriteLine("The following lockers are open.");
+
+        for (int locker = 1; locker <= lockers.Length; locker++)
+        {
+            if (lockers[locker - 1])
+            {
+                Console.Write(locker + "\t");
+                openCount++;
+                if (openCount % 5 == 0)
+                {
+                    Console.WriteLine();
+                }
+            }
+        }
+        Console.WriteLine();
+    }
+
+    public static void toggleLockersForStudent(int studentNumber, ref bool[] lockers)
+    {
+        for (int i = studentNumber - 1; i < lockers.Length; i += studentNumber)
+        {
+            // studentNumber - 1 is used because the Array starts at 0, but the studentNumber has to start with 1.
+            lockers[i] = !lockers[i]; // Flips from false to true or true to false.
+        }
     }
 }

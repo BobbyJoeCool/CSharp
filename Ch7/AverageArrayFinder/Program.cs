@@ -82,3 +82,92 @@ SUBMISSION CHECKLIST
 [ ] Each array is printed with labels and its computed average
 [ ] No global variables; Main coordinates only
 */
+
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+    short[] shorts = { 1, 2, 3, 4, 5 };
+    int[] integers = { 10, 25, 44, 89, 104, 287, 398 };
+    long[] longs = { 10203, 1928340, 18957980, 18765439, 12870493, 75810943, 7518039 };
+    double[] doubles = { .02, .08, .123, .278, .283495, .781492, .97623187 };
+
+    Console.WriteLine("Array Element Type: Shorts");
+    for (int i = 0; i < shorts.Length; i++)
+    {
+      Console.Write(shorts[i] + ", ");
+    }
+    Console.WriteLine();
+    Console.WriteLine("The average is: " + Average(shorts) + "\n");
+
+    Console.WriteLine("Array Element Type: Integers");
+    for (int i = 0; i < integers.Length; i++)
+    {
+      Console.Write(integers[i] + ", ");
+    }
+    Console.WriteLine();
+    Console.WriteLine("The average is: " + Average(integers) + "\n");
+
+    Console.WriteLine("Array Element Type: Longs");
+    for (int i = 0; i < longs.Length; i++)
+    {
+      Console.Write(longs[i] + ", ");
+    }
+    Console.WriteLine();
+    Console.WriteLine("The average is: " + Average(longs) + "\n");
+
+    Console.WriteLine("Array Element Type: Doubles");
+    for (int i = 0; i < doubles.Length; i++)
+    {
+      Console.Write(doubles[i] + ", ");
+    }
+    Console.WriteLine();
+    Console.WriteLine("The average is: " + Average(doubles) + "\n");
+  }
+  static short Average(short[] array)
+  {
+    if (array.Length == 0) return 0;
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      sum += array[i];
+    }
+    return (short)(sum / array.Length);
+  }
+
+  static int Average(int[] array)
+  {
+    if (array.Length == 0) return 0;
+    long sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      sum += array[i];
+    }
+    return (int)(sum / array.Length);
+  }
+
+  static long Average(long[] array)
+  {
+    if (array.Length == 0) return 0;
+    long sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      sum += array[i];
+    }
+    return (long)(sum / array.Length);
+  }
+
+  static double Average(double[] array)
+  {
+    if (array.Length == 0) return 0.0;
+    double sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+      sum += array[i];
+    }
+    return (double)(sum / array.Length);
+  }
+
+}

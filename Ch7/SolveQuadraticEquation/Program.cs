@@ -70,11 +70,68 @@ SUBMISSION CHECKLIST
 
 using System;
 
-public class SolveQuadraticEquations
+public class Program
 {
     public static void Main()
     {
-        // TODO: Implement SolveQuadratic method here
+        Console.WriteLine("ax^2 + bx + c = 0.  Quadratic Equation Solver!");
+        Console.WriteLine("Enter values for a, b, and c:");
+        Console.Write("a = ");
+        double a = double.Parse(Console.ReadLine());
 
+        if (a == 0)
+        {
+            Console.WriteLine("If 'a' is 0, it is a linear equation.");
+            return;
+        }
+
+        Console.Write("b = ");
+        double b = double.Parse(Console.ReadLine());
+        Console.Write("c = ");
+        double c = double.Parse(Console.ReadLine());
+
+        double[] eqn = {a, b, c};
+        double[] roots = {0, 0};
+
+        int rootCount = SolveQuadratic(eqn, ref roots);
+
+        Console.WriteLine("Your equation has " + rootCount + " real roots.");
+
+        switch (rootCount)
+        {
+        case 1:
+            Console.WriteLine("The root is " + roots[0]);
+            break;
+        case 2:
+            Console.WriteLine("Those roots are " + roots[0] + " and " + roots[1]);
+            break;
+        case 0:
+            Console.WriteLine("No real roots.");
+            break;
+        }
+    }
+
+    public static int SolveQuadratic(double[] eqn,ref double[] roots)
+    {
+        double a = eqn[0];
+        double b = eqn[1];
+        double c = eqn[2];
+
+        double discriminant = (b * b) - (4 * a * c);
+
+        if (discriminant > 0) {
+            roots[0] = (-b + Math.Sqrt(discriminant)) / (2 * a);
+            roots[1] = (-b - Math.Sqrt(discriminant)) / (2 * a);
+            return 2;
+        } 
+        else if (discriminant == 0)
+        {
+            roots[0] = -b / (2 * a);
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
